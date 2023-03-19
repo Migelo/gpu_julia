@@ -1,0 +1,7 @@
+name = "GpuJulia"
+uuid = "b53a8abf-3723-4cc1-9af5-f1c839b56902"
+authors = ["Miha Cernetic <miha@filetki.si>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
