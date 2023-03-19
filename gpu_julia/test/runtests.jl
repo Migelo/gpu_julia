@@ -49,5 +49,21 @@ println("Testing...")
         -
         63
     )
+    @test_throws AssertionError legendre_(-1, 5)
+    @test_throws AssertionError legendre_(11, 5)
+end
+
+@testset "legendre" begin
+    @test sqrt(2 * 0 + 1) * legendre_(0, 0.5) == legendre(0, 0.5)
+    @test sqrt(2 * 1 + 1) * legendre_(1, 0.5) == legendre(1, 0.5)
+    @test sqrt(2 * 2 + 1) * legendre_(2, 0.5) == legendre(2, 0.5)
+    @test sqrt(2 * 3 + 1) * legendre_(3, 0.5) == legendre(3, 0.5)
+    @test sqrt(2 * 4 + 1) * legendre_(4, 0.5) == legendre(4, 0.5)
+    @test sqrt(2 * 5 + 1) * legendre_(5, 0.5) == legendre(5, 0.5)
+    @test sqrt(2 * 6 + 1) * legendre_(6, 0.5) == legendre(6, 0.5)
+    @test sqrt(2 * 7 + 1) * legendre_(7, 0.5) == legendre(7, 0.5)
+    @test sqrt(2 * 8 + 1) * legendre_(8, 0.5) == legendre(8, 0.5)
+    @test sqrt(2 * 9 + 1) * legendre_(9, 0.5) == legendre(9, 0.5)
+    @test sqrt(2 * 10 + 1) * legendre_(10, 0.5) == legendre(10, 0.5)
 
 end
