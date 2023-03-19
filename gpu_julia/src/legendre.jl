@@ -3,12 +3,12 @@ function legendre_(order::Int, x::Number)
     @assert(order < 11, "order cannot be <0")
     order == 0 && return 1
     order == 1 && return x
-    order == 2 && return 0.5 * (3 * x * x - 1)
+    order == 2 && return 0.5 * (3 * x^2 - 1)
     order == 3 && return 0.5 * (5 * x^3 - 3 * x)
-    order == 4 && return (1.0 / 8) * (35 * x^4 - 30 * x * x + 3)
+    order == 4 && return (1.0 / 8) * (35 * x^4 - 30 * x^2 + 3)
     order == 5 && return (1.0 / 8) * (63 * x^5 - 70 * x^3 + 15 * x)
     order == 6 && return (1.0 / 16) * (
-        231 * x^6 - 315 * x^4 + 105 * x * x - 5
+        231 * x^6 - 315 * x^4 + 105 * x^2 - 5
     )
     order == 7 && return (1.0 / 16) * (
         429 * x^7 - 693 * x^5 + 315 * x^3 - 35 * x
@@ -20,7 +20,7 @@ function legendre_(order::Int, x::Number)
         +
         6930 * x^4
         -
-        1260 * x * x
+        1260 * x^2
         +
         35
     )
@@ -44,7 +44,7 @@ function legendre_(order::Int, x::Number)
         -
         30030 * x^4
         +
-        3465 * x * x
+        3465 * x^2
         -
         63
     )
