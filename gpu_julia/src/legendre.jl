@@ -1,4 +1,4 @@
-function legendre_(order::Int, x::Number)
+function legendre(order::Int, x::Number)
     @assert(order >= 0, "order cannot be <0")
     @assert(order < 11, "order cannot be <0")
     order == 0 && return 1
@@ -52,8 +52,8 @@ end
 
 
 
-function legendre(order::Int, x::Number)
-    return sqrt(2 * order + 1) * legendre_(order, x)
+function legendre_normalized(order::Int, x::Number)
+    return sqrt(2 * order + 1) * legendre(order, x)
 end
 
 
