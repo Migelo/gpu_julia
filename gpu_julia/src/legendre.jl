@@ -52,12 +52,12 @@ end
 
 
 
-function legendre(order::UInt, x::Number)
+function legendre(order::Int, x::Number)
     return sqrt(2 * order + 1) * legendre_(order, x)
 end
 
 
-function local_to_global_coords(nc::UInt, cell::UInt, local_coord::Number)
+function local_to_global_coords(nc::Int, cell::Int, local_coord::Number)
     @assert(local_coord >= -1, "local_coord >= -1")
     @assert(local_coord <= 1, "local_coord <= 1")
     return (local_coord / 2 + 0.5) * ((1 + cell) / nc)
